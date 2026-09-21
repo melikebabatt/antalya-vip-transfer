@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Caretta VIP | Antalya Airport Transfer</title>
+<meta name="description" content="Caretta VIP Antalya Airport Transfer — 7/24 özel transfer hizmeti.">
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body>
+<div class="top"><div class="container topin"><span>7/24 Caretta VIP Antalya Airport Transfer</span><span>WhatsApp: +90 554 216 07 01</span></div></div>
+
+<nav class="nav"><div class="container navin">
+<a class="logo" href="#home">CARETTA <span>VIP</span></a>
+<div class="links"><a href="#transfer" data-i18n="navTransfer">Transfer</a><a href="#fleet" data-i18n="navFleet">Araçlar</a><a href="#campaigns" data-i18n="navCampaign">Kampanyalar</a><a href="#reviews" data-i18n="navReviews">Yorumlar</a><a href="#contact" data-i18n="navContact">İletişim</a></div>
+<div class="actions"><select class="lang" id="lang" aria-label="Dil"><option value="tr">TR</option><option value="en">EN</option><option value="ru">RU</option><option value="de">DE</option><option value="ar">AR</option><option value="fa">FA</option><option value="da">DA</option></select><button class="memberBtn" onclick="openMember()" data-i18n="member">Üye Ol</button><button class="wa" onclick="openWhatsApp()">WhatsApp</button></div>
+</div></nav>
+
+<section class="hero" id="home"><div class="container heroIn">
+<div class="heroCopy"><div class="badge">24/7 · CARETTA VIP</div><h1 data-i18n="heroTitle">Antalya'da <span class="gold">konforlu</span> ve güvenli VIP transfer</h1><p data-i18n="heroText">Havalimanı, otel, villa veya istediğiniz adres arasında özel transfer. Nereden nereye gideceğinizi seçin, teklifinizi kolayca alın.</p><div class="heroPills"><span>✦ 7/24 Hizmet</span><span>✦ Özel Araç</span><span>✦ Zamanında Ulaşım</span></div></div>
+
+<div class="booking" id="transfer">
+<div class="bookingHead"><div><small>CARETTA VIP ANTALYA AIRPORT TRANSFER</small><h2 data-i18n="bookingTitle">Transfer talebi oluştur</h2></div><span class="service">7/24</span></div>
+<div class="tabs"><button class="tab active" data-trip="one" data-i18n="oneWay">Tek Yön</button><button class="tab" data-trip="round" data-i18n="roundTrip">Gidiş - Dönüş</button></div>
+<div class="grid">
+<div class="field"><label data-i18n="fromLabel">Nereden?</label><select id="from"><option>Antalya Havalimanı (AYT)</option><option>Gazipaşa-Alanya Havalimanı (GZP)</option><option>Antalya Merkez</option><option>Lara</option><option>Konyaaltı</option><option>Muratpaşa</option><option>Kepez</option><option>Aksu</option><option>Döşemealtı</option><option>Belek</option><option>Serik</option><option>Kemer</option><option>Manavgat</option><option>Side</option><option>Alanya</option><option>Mahmutlar</option><option>Kestel</option><option>Konaklı</option><option>Avsallar</option><option>Okurcalar</option><option>Gazipaşa</option><option>Kaş</option><option>Kalkan</option></select><button type="button" class="mapBtn" onclick="openMap('from')">⌖ Haritadan konum seç</button><input id="fromAddress" class="addressInput" placeholder="Açık adres (otel, villa, sokak vb.)"></div>
+<div class="field"><label data-i18n="toLabel">Nereye?</label><select id="to"><option>Antalya Havalimanı (AYT)</option><option>Gazipaşa-Alanya Havalimanı (GZP)</option><option>Antalya Merkez</option><option>Lara</option><option>Konyaaltı</option><option>Muratpaşa</option><option>Kepez</option><option>Aksu</option><option>Döşemealtı</option><option>Belek</option><option>Serik</option><option>Kemer</option><option>Manavgat</option><option>Side</option><option>Alanya</option><option>Mahmutlar</option><option>Kestel</option><option>Konaklı</option><option>Avsallar</option><option>Okurcalar</option><option>Gazipaşa</option><option>Kaş</option><option>Kalkan</option></select><button type="button" class="mapBtn" onclick="openMap('to')">⌖ Haritadan konum seç</button><input id="toAddress" class="addressInput" placeholder="Açık adres (otel, villa, sokak vb.)"></div>
+<div class="field"><label data-i18n="passengerLabel">Yolcu</label><select id="passengers"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option></select></div>
+<div class="field"><label data-i18n="dateLabel">Gidiş tarihi</label><input id="date" type="date"></div>
+<div class="field"><label data-i18n="timeLabel">Gidiş saati</label><input id="time" type="time"></div>
+<div class="field returnField" style="display:none"><label data-i18n="returnDate">Dönüş tarihi</label><input id="rdate" type="date"></div>
+<div class="field returnField" style="display:none"><label data-i18n="returnTime">Dönüş saati</label><input id="rtime" type="time"></div>
+<div class="full"><button class="searchbtn" onclick="startReservation()" data-i18n="search">Teklif Al · Transfer seçeneklerini göster</button></div>
+</div></div>
+</div></section>
+
+<section class="section light"><div class="container"><div class="title"><span class="eyebrow">CARETTA VIP</span><h2 data-i18n="whyTitle">Neden bizi tercih etmelisiniz?</h2><p data-i18n="whyText">Özel araç, uygun fiyat ve zamanında ulaşım ile konforlu transfer deneyimi.</p></div><div class="features"><div class="feature"><i>₺</i><b data-i18n="f1">Uygun fiyat</b><p data-i18n="f1p">İhtiyacınıza uygun transfer seçenekleri.</p></div><div class="feature"><i>◆</i><b data-i18n="f2">Özel araç</b><p data-i18n="f2p">Paylaşımlı değil, sadece size özel transfer.</p></div><div class="feature"><i>✓</i><b data-i18n="f3">Zamanında ulaşım</b><p data-i18n="f3p">Planlanan saatte güvenli ve konforlu ulaşım.</p></div><div class="feature"><i>◎</i><b data-i18n="f4">7/24 hizmet</b><p data-i18n="f4p">Günün her saati transfer talebinizi iletebilirsiniz.</p></div></div></div></section>
+
+<section class="section" id="fleet"><div class="container"><div class="title"><span class="eyebrow">FLEET</span><h2 data-i18n="fleetTitle">Araç filomuz</h2><p data-i18n="fleetText">Yolcu sayınıza ve transfer ihtiyacınıza göre aracınızı seçin.</p></div><div class="cards">
+<div class="card"><div class="carimg car-private"><span>1–7</span></div><div class="cardbody"><div class="cardtag">VIP PRIVATE</div><h3>VIP Private</h3><p>1–7 kişi · Özel transfer · Konfor</p><button onclick="chooseVehicle('VIP Private — 1-7 kişi')">Teklif Al</button></div></div>
+<div class="card"><div class="carimg car-crafter"><span>7–16</span></div><div class="cardbody"><div class="cardtag">VIP VAN</div><h3>Crafter</h3><p>7–16 kişi · Geniş iç hacim · Grup</p><button onclick="chooseVehicle('Crafter — 7-16 kişi')">Teklif Al</button></div></div>
+<div class="card"><div class="carimg car-sprinter"><span>7–16</span></div><div class="cardbody"><div class="cardtag">VIP VAN</div><h3>Sprinter</h3><p>7–16 kişi · Konforlu grup transferi</p><button onclick="chooseVehicle('Sprinter — 7-16 kişi')">Teklif Al</button></div></div>
+<div class="card"><div class="carimg car-maybach"><span>1–7</span></div><div class="cardbody"><div class="cardtag">LUXURY</div><h3>Maybach Lüks</h3><p>1–7 kişi · Üst segment konfor</p><button onclick="chooseVehicle('Maybach Lüks — 1-7 kişi')">Teklif Al</button></div></div>
+</div></div></section>
+
+<section class="section darkSection" id="campaigns"><div class="container"><div class="campaign"><div><span class="eyebrow">SPECIAL OFFERS</span><h2 data-i18n="campaignTitle">Kampanyaları kaçırmayın</h2><p data-i18n="campaignText">Güncel kampanyalar ve özel teklifler burada yayınlanabilir.</p></div><button class="btn" onclick="document.getElementById('transfer').scrollIntoView()" data-i18n="book">Teklif Al</button></div></div></section>
+
+<section class="section reviewSection" id="reviews"><div class="container"><div class="title"><span class="eyebrow">REVIEWS</span><h2 data-i18n="reviewsTitle">Transfer yorumları</h2><p data-i18n="reviewsText">Gerçek müşterilerimizin yorumları burada yayınlanacaktır.</p></div><div class="reviewsEmpty"><div class="reviewStars">★★★★★</div><h3 data-i18n="reviewsEmptyTitle">Müşteri yorumları yakında</h3><p data-i18n="reviewsEmptyText">İlk gerçek müşteri yorumlarımızı bu alanda paylaşacağız.</p><button class="btn" onclick="openMember()" data-i18n="reviewButton">Üye Ol / Yorum Yap</button></div></div></section>
+
+<section class="section" id="contact"><div class="container"><div class="reserve"><div class="title" style="margin-bottom:25px"><span class="eyebrow">CONTACT</span><h2 data-i18n="contactTitle">İletişim</h2><p data-i18n="contactText">WhatsApp, Instagram ve Facebook üzerinden bize ulaşabilirsiniz.</p></div><div class="socials"><button class="social whatsapp" onclick="openWhatsApp()">WhatsApp</button><a class="social instagram" href="https://www.instagram.com/caretta.vip.airport.transfer?stkn=MThvb3lqZ2xyZGk2ag==" target="_blank" rel="noopener">Instagram</a><a class="social facebook" href="https://www.facebook.com/profile.php?id=61594129514841" target="_blank" rel="noopener">Facebook</a></div></div></div></section>
+
+<footer class="footer"><div class="container footgrid"><div><div class="logo">CARETTA <span>VIP</span></div><p>Caretta VIP Antalya Airport Transfer — 7/24 özel transfer hizmeti.</p></div><div><b>Transfer</b><ul><li>Antalya Havalimanı (AYT)</li><li>Gazipaşa-Alanya (GZP)</li><li>Antalya ilçeleri</li></ul></div><div><b>Hizmet</b><ul><li>7/24 Transfer</li><li>Gidiş-dönüş</li><li>Özel araç seçenekleri</li></ul></div></div></footer>
+
+<div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div id="reservationStep"><span class="eyebrow">TRANSFER OPTIONS</span><h2 data-i18n="modalTitle">Transfer seçenekleri</h2><div id="result"></div><div class="vehicleOptions" id="vehicleOptions"></div><div class="reservegrid"><div class="field"><label>Ad Soyad</label><input id="name" placeholder="Adınız Soyadınız"></div><div class="field"><label>E-posta</label><input id="email" type="email" placeholder="mail@example.com"></div><div class="field full"><button class="searchbtn" onclick="sendReservation()" data-i18n="confirm">Teklif talebini WhatsApp'a gönder</button></div></div><p class="notice">Teklif talebiniz WhatsApp üzerinden iletilecektir.</p></div></div></div>
+
+<div class="memberModal" id="memberModal"><div class="memberBox"><button class="close" onclick="closeMember()">×</button><span class="eyebrow">CARETTA VIP</span><h2 data-i18n="memberTitle">Üyelik</h2><p data-i18n="memberText">Rezervasyonlarınızı ve yorumlarınızı daha kolay yönetmek için üyelik sistemi.</p><div class="memberTabs"><button class="memberTab active" onclick="showMemberForm('register')" data-i18n="register">Üye Ol</button><button class="memberTab" onclick="showMemberForm('login')" data-i18n="login">Giriş Yap</button></div><form id="registerForm" onsubmit="registerMember(event)"><input id="memberName" required placeholder="Ad Soyad"><input id="memberEmail" type="email" required placeholder="E-posta"><input id="memberPassword" type="password" required minlength="6" placeholder="Şifre (en az 6 karakter)"><button class="searchbtn" type="submit" data-i18n="register">Üye Ol</button></form><form id="loginForm" class="hidden" onsubmit="loginMember(event)"><input id="loginEmail" type="email" required placeholder="E-posta"><input id="loginPassword" type="password" required placeholder="Şifre"><button class="searchbtn" type="submit" data-i18n="login">Giriş Yap</button></form><p id="memberStatus" class="notice center"></p><p class="memberNote">Üyelik ekranı hazırlandı. Gerçek hesapların tüm cihazlarda çalışması için Cloudflare üzerinde ücretsiz D1 veritabanı bağlantısı ayrıca kurulmalıdır.</p></div></div>
+
+<div class="mapModal" id="mapModal"><div class="mapBox"><button class="close" onclick="closeMap()">×</button><h2>Haritadan konum seç</h2><p class="mapHint">Haritada istediğiniz noktaya tıklayın. Konum adres alanına aktarılacak.</p><div id="map"></div><div class="mapActions"><button class="btn secondary" onclick="useMyLocation()">Konumumu kullan</button><button class="btn" onclick="confirmMapLocation()">Bu konumu seç</button></div><div id="mapStatus" class="notice"></div></div></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="js/app.js"></script>
+</body></html>
